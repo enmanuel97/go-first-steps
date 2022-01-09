@@ -14,13 +14,21 @@ func main() {
 
 	// Distinto
 	r = a != b
-	fmt.Printf("%d es igual que %d? %t \n", a, b, r)
+	fmt.Printf("%d es distinto que %d? %t \n", a, b, r)
 
 	// Mayor que
 	r = a > b
-	fmt.Printf("%d es igual que %d? %t \n", a, b, r)
+	fmt.Printf("%d es mayor que %d? %t \n", a, b, r)
 
 	// Menor que
 	r = a < b
-	fmt.Printf("%d es igual que %d? %t \n", a, b, r)
+	fmt.Printf("%d es menor que %d? %t \n", a, b, r)
+
+	// mayor o igual que
+	r = a >= b
+	fmt.Printf("%d es mayor o igual que %d? %t \n", a, b, r)
+
+	// Menor o igual que
+	r = a <= b
+	fmt.Printf("%d es menor o igual que %d? %t \n", a, b, r)
 }
