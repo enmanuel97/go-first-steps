@@ -1,0 +1,2 @@
+Hola Mundo desde el curso de Go
+Eso es todo, gracias por esperar!
