@@ -8,6 +8,11 @@ type Persona struct {
 	edad   int
 }
 
+// metodos
+func (p *Persona) imprimir() {
+	
+}
+
 func main() {
 	p1 := Persona{"Jesus Enmanuel", 24}
 	
