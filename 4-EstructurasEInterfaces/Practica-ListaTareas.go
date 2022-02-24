@@ -2,6 +2,15 @@ package main
 
 import "fmt"
 
+// Lista de tareas
+type TaskList struct {
+	tasks [] *Task
+}
+
+func (tl *TaskList) appendTask(t *Task) {
+	tl.tasks = append(tl.tasks, t)
+}
+
 // Tareas
 type Task struct {
 	name      string
@@ -19,6 +28,18 @@ func (t *Task) markCompleted() {
 
 func main() {
 	t1 := Task{
-		nombre
+		name:      "Curso de Go",
+		desc:      "Completar curso de Go este mes",
+		completed: false,
 	}
+
+	t2 := Task{
+		name:      "Curso de HTML",
+		desc:      "Completar curso de HTML esta semana",
+		completed: true,
+	}
+
+	t1.toPrint()
+	fmt.Println("-------------------------")
+	t2.toPrint()
 }
