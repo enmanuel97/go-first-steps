@@ -17,7 +17,7 @@ func (p *Persona) editarNombre(nuevoNombre string) {
 	p.nombre = nuevoNombre
 }
 
-// Herencia 
+// Herencia
 type Empleado struct {
 	Persona,
 	sueldo float64
@@ -43,7 +43,7 @@ func main() {
 	p2.editarNombre("Carlos Miguel")
 	p2.imprimir()
 
-	em1 := Empleado {
+	em1 := Empleado{
 		sueldo: 500,
 	}
 	em1.nombre = "Pedro"

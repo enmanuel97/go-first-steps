@@ -4,11 +4,15 @@ import "fmt"
 
 // Lista de tareas
 type TaskList struct {
-	tasks [] *Task
+	tasks []*Task
 }
 
 func (tl *TaskList) appendTask(t *Task) {
 	tl.tasks = append(tl.tasks, t)
+}
+
+func (tl *TaskList) removeTask(index int) {
+	tl.tasks = append(tl.tasks[:index], tl.tasks[index+1:]...)
 }
 
 // Tareas
@@ -39,7 +43,23 @@ func main() {
 		completed: true,
 	}
 
-	t1.toPrint()
+	t3 := Task{
+		name:      "Curso de CSS",
+		desc:      "Completar curso de CSS esta semana",
+		completed: false,
+	}
+
+	lista := TaskList{}
+	lista.appendTask(&t1)
+	lista.appendTask(&t2)
+	lista.appendTask(&t3)
+
+	lista.removeTask(1)
+
+	for i, task := range lista.tasks {
+		fmt.Println(i, task.name)
+	}
+	/*t1.toPrint()
 	fmt.Println("-------------------------")
-	t2.toPrint()
+	t2.toPrint()*/
 }
